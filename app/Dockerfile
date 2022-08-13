@@ -7,5 +7,5 @@ RUN curl -o dnsmasq-${VERSION}.tar.gz https://thekelleys.org.uk/dnsmasq/dnsmasq-
 WORKDIR /home/dnsmasq/dnsmasq-${VERSION}
 RUN make install && apt-get remove -y curl make gcc && apt-get autoremove -y
 WORKDIR /home/dnsmasq
-COPY app/run.sh .
+COPY run.sh .
 ENTRYPOINT [ "./run.sh" ]

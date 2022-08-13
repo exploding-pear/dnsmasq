@@ -4,6 +4,7 @@ on: [push]
 
 env:
   DNSMASQ_VERSION: 2.86
+  APP_VERSION: v1
 
 jobs:
   docker:
@@ -33,4 +34,4 @@ jobs:
           context: app
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dnsmasq:${{ env.DNSMASQ_VERSION }}-v1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dnsmasq:${{ env.DNSMASQ_VERSION }}-${{ env.APP_VERSION }}
