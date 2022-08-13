@@ -39,7 +39,7 @@ spec:
               protocol: TCP
           volumeMounts:
             - name: resolv-dnsmasq
-              mountPath: /etc/resolv.dnsmasq.conf
+              mountPath: /etc/resolv.conf
           # livenessProbe:
           #   httpGet:
           #     path: /
