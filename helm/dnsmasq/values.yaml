@@ -85,4 +85,6 @@ affinity: {}
 configmap:
   enabled: true
   dnsmasqConf: |
+    resolv-file=/etc/dnsmasq.d/resolv.conf
+  resolvConf: |
     nameserver 1.1.1.1

@@ -5,4 +5,5 @@ metadata:
   name: dnsmasq-config
 data:
   dnsmasq.conf: {{ .Values.configmap.dnsmasqConf }}
+  resolve.conf: {{ .Values.configmap.resolvConf }}
 {{- end }}
