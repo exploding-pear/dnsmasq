@@ -37,6 +37,9 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          volumeMounts:
+            - name: resolv-dnsmasq
+              mountPath: /etc/resolv.dnsmasq.conf
           # livenessProbe:
           #   httpGet:
           #     path: /
@@ -47,6 +50,10 @@ spec:
           #     port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: resolv-dnsmasq
+          configMap:
+            name: dnsmasq-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

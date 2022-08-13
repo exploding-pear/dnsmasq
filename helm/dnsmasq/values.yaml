@@ -81,3 +81,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+configmap:
+  enabled: true
+  resolvConf: |
+    nameserver 1.1.1.1
