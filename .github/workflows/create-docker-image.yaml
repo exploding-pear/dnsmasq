@@ -4,7 +4,7 @@ on: [push]
 
 env:
   DNSMASQ_VERSION: 2.86
-  APP_VERSION: v1
+  APP_VERSION: v2
 
 jobs:
   docker:

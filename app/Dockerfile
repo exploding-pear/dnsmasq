@@ -8,4 +8,5 @@ WORKDIR /home/dnsmasq/dnsmasq-${VERSION}
 RUN make install && apt-get remove -y curl make gcc && apt-get autoremove -y
 WORKDIR /home/dnsmasq
 COPY run.sh .
-ENTRYPOINT [ "./run.sh" ]
+ENTRYPOINT [ "bash" ]
+CMD [ "run.sh" ]

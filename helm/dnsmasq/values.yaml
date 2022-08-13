@@ -8,7 +8,7 @@ image:
   repository: rowdymarshmallow/dnsmasq
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "2.86-v1"
+  tag: "2.86-v2"
 
 imagePullSecrets: []
 nameOverride: ""
