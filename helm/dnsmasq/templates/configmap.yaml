@@ -6,5 +6,6 @@ metadata:
 data:
   dnsmasq.conf: | 
     {{ .Values.configmap.dnsmasqConf | nindent 4 }}
-  resolve.conf: {{ .Values.configmap.resolvConf }}
+  resolve.conf: |
+    {{ .Values.configmap.resolvConf | nindent 4 }}
 {{- end }}
