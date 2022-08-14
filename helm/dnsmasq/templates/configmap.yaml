@@ -4,6 +4,7 @@ kind: ConfigMap
 metadata:
   name: dnsmasq-config
 data:
-  dnsmasq.conf: {{ .Values.configmap.dnsmasqConf }}
+  dnsmasq.conf: | 
+    {{ .Values.configmap.dnsmasqConf | nindent 4 }}
   resolve.conf: {{ .Values.configmap.resolvConf }}
 {{- end }}
